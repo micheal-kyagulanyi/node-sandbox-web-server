@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.YOUR_PORT || process.env.PORT || 3000;
-const host = process.env.YOUR_HOST || '127.0.0.1';
+//const host = process.env.YOUR_HOST || '127.0.0.1';
 
 var app = express();
 
@@ -60,6 +60,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(port, host, () => {
+app.listen(port, () => {
     console.log(`Server running on ${host}:${port}`);
 });
