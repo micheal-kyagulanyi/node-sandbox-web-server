@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.YOUR_PORT || process.env.PORT || 3000;
-const host = process.env.YOUR_HOST || '0.0.0.0';
+const host = process.env.YOUR_HOST || '127.0.0.1';
 
 var app = express();
 
