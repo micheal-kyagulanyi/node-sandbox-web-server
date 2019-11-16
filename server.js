@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -32,11 +32,11 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
     res.render('maintenance.hbs', {
       pageTitle : 'We will be right back.',  
     })
-});
+}); */
 
 app.get('/', (req, res) => {
     // res.send('<h1>Hello, Express!</h1>');
@@ -59,4 +59,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log(`Server running on port ${port}`);
+});
