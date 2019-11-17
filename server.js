@@ -54,6 +54,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle : 'Our projects',
+        subHeading : 'We are working hard to serve',
+        pageContent : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et laborum architecto, provident atque temporibus, suscipit omnis officia unde ullam harum rem quo quidem distinctio esse. Quidem excepturi exercitationem porro est.',
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage : 'Bad request',
